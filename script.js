@@ -13,6 +13,11 @@ if (formCadastro) {
         let cidade = document.getElementById("cidade").value
         let senha = document.getElementById("senha").value
 
+        if (!nome || !email || !telefone || !cidade || !senha) {
+            alert("Preencha todos os campos")
+            return
+        }
+
         let usuario = {
             nome: nome,
             email: email,
@@ -46,6 +51,11 @@ if (formLogin) {
 
         let email = document.getElementById("emailLogin").value
         let senha = document.getElementById("senhaLogin").value
+
+        if (!email || !senha) {
+            alert("Digite email e senha")
+            return
+        }
 
         let usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
 
