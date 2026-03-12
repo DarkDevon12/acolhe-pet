@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*BODY*/
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*CONTAINER*/
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*CARD*/
+
+.card{
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+
+    background: #d4d4d4c5;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: 0 10px 25px;
+}
+
+.card h2{
+    text-align: center;
+}
+
+/*Formulario*/
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.form button{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+
+    background: #b68601;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot-password{
+    text-align: right;
+    font-size: 14px;
+}
+
+.forgot-password a{
+    color: #b68601;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password a:hover{
+    text-decoration: underline;
+}
+
+
+/*Já possui login/cadastro*/
+.tabs{
+    text-align:center;
+    margin-top:10px;
+}
+
+.login-link{
+    color:#b68601;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    padding:2px 4px;
+}
+
+.login-link:hover{
+    text-decoration:underline;
+}
