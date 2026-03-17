@@ -65,6 +65,8 @@ if (formLogin) {
 
         if (usuarioValido) {
 
+            localStorage.setItem("usuarioLogado", JSON.stringify(usuarioValido))
+
             alert("Login realizado com sucesso!")
 
             window.location.href = "dashboard.html"
