@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*BODY*/
@@ -12,9 +13,8 @@ body{
     align-items: center;
     font-family: sans-serif;
 
-    background-image: url("./images/background.jpg");
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #ff6a00, #ff8c42);
+   
 }
 
 /*CONTAINER*/
@@ -33,18 +33,24 @@ body{
     max-width: 380px;
     padding: 30px;
 
-    background: #d4d4d4c5;
+    background: #c2bdbd;
     border-radius: 16px;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    box-shadow: 0 10px 25px;
+        box-shadow: 
+        0 10px 30px rgba(0,0,0,0.2),
+        0 2px 8px rgba(0,0,0,0.1);
+
+    backdrop-filter: blur(10px);
 }
 
 .card h2{
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size:clamp(48px, 5vw, 42px);
 }
 
 /*Formulario*/
@@ -52,13 +58,23 @@ body{
 .form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .form input{
-    padding: 10px;
-    border: none;
+    width: 100%;
+    padding: 12px;
     border-radius: 8px;
+    border: none;
+    background: #e9eef5;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.form input:focus{
+    background: #fff;
+    box-shadow: 0 0 0 2px #ff6a00;
 }
 
 .form button{
@@ -66,7 +82,7 @@ body{
     border: none;
     border-radius: 8px;
 
-    background: #b68601;
+    background: #fc7a00;
     color: white;
 
     font-weight: bold;
@@ -79,7 +95,7 @@ body{
 }
 
 .forgot-password a{
-    color: #b68601;
+    color: #fc7a00;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -96,7 +112,7 @@ body{
 }
 
 .login-link{
-    color:#b68601;
+    color:#fc7a00;
     text-decoration:none;
     font-weight:600;
     transition:0.3s;

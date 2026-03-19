@@ -3,6 +3,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-color:black;
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -38,43 +42,82 @@
     opacity:0.8;
 }
 
-.hero{
-    background: #fc7a00;
-    color:white;
+.hero {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 60px;
 
-    padding:60px 20px;
+    border-radius: 20px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    align-items: center;
 
-    gap:30px;
-    flex-wrap: wrap;
+    /* IMAGEM + OVERLAY ESCURO */
+    background: 
+        linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2)),
+        url('./images/gato-1.png') center/cover no-repeat;
+
+    color: white;
 }
 
-.hero-text{
-
-    flex: 1;
-    min-width: 280px;
-    max-width: 600px;
-
+.hero-content {
+    max-width: 500px;
 }
 
-
-.hero h1{
-    font-size:clamp(48px, 5vw, 42px);
-    font-weight:700;
-    line-height:1.2;
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
+.badge {
+    font-size: 14px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.hero p{
-    font-size: 20px;
-    max-width: 600px;
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 16px;
     line-height: 1.5;
-    margin-top: 0.5rem;
+    margin-bottom: 20px;
+}
 
+.btn {
+    background: #fc7a00;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 
+
+
+@media (max-width: 768px) {
+    .hero {
+        margin: 20px;
+        padding: 30px 20px;
+
+        /* muda o degradê pra ficar melhor no mobile */
+        background: 
+            linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+            url('./images/gato-1.png') center/cover no-repeat;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+}
