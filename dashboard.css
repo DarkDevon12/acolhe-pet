@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .topbar {
@@ -10,12 +10,22 @@
 
     padding: 20px;
 
-    background: #b68601;
-    color: white;
+    background: black;
+    color: rgb(255, 255, 255);
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    height: 40px;
 }
 
 #logout{
-    background:#b68601;
+    background: #fc7a00;
     border:none;
     padding:8px 15px;
     border-radius:6px;
@@ -28,41 +38,43 @@
     opacity:0.8;
 }
 
-.dashboard{
-    padding: 40px;
-}
+.hero{
+    background: #fc7a00;
+    color:white;
 
-#titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+    padding:60px 20px;
 
-.cards{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
-.card{
+.hero-text{
 
-    display: flex;
-    justify-content: center;
-    width: 200px;
-
-
-    padding: 30px;
-
-    border-radius: 12px;
-    background: #f5f5f5;
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
 
 }
 
-.card:hover{
-    background-color: #b68601;
-    color: white;
-    cursor: pointer;
+
+.hero h1{
+    font-size:clamp(48px, 5vw, 42px);
+    font-weight:700;
+    line-height:1.2;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
 }
+
+.hero p{
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+
+}
+
+
