@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color:black;
+    background-color:rgb(249, 169, 83);
 }
 
 .topbar {
@@ -99,6 +99,12 @@ body{
     opacity: 0.8;
 }
 
+.pets h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
 
 
 
