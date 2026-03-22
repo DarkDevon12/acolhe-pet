@@ -9,11 +9,9 @@ if (formCadastro) {
 
         let nome = document.getElementById("nome").value
         let email = document.getElementById("email").value
-        let telefone = document.getElementById("telefone").value
-        let cidade = document.getElementById("cidade").value
         let senha = document.getElementById("senha").value
 
-        if (!nome || !email || !telefone || !cidade || !senha) {
+        if (!nome || !email || !senha) {
             alert("Preencha todos os campos")
             return
         }
@@ -21,8 +19,6 @@ if (formCadastro) {
         let usuario = {
             nome: nome,
             email: email,
-            telefone: telefone,
-            cidade: cidade,
             senha: senha
         }
 
