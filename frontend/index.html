@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,31 +7,26 @@
     <title>Acolhe Pet</title>
     <link rel="shortcut icon" href="./images/paw (1).png" type="image/png">
     <link rel="stylesheet" href="./style.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container">
         <div class="card">
             <div class="icon-form"> 
-                <img src="./images/AcolhePet-2.png" >
-              
-             </div> 
-
+                <img src="./images/AcolhePet-2.png" alt="Logo Acolhe Pet">
+            </div> 
 
             <form class="form" id="formCadastro">
-
                 <input id="nome" type="text" placeholder="Nome">
                 <input id="email" type="email" placeholder="Email">
                 <input id="senha" type="password" placeholder="Senha">
+                <input id="confirmarSenha" type="password" placeholder="Confirmar senha">
+
+                <small class="senha-dica">
+                    Mín. 8 caracteres, com maiúscula, minúscula, número e caractere especial.
+                </small>
 
                 <button type="submit">Cadastrar</button>
             </form>
@@ -42,7 +37,6 @@
                     <a href="login.html" class="login-link">Fazer login</a>
                 </p>
             </div>
-
         </div>
     </div>
 
