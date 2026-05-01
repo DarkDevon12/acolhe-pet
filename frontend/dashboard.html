@@ -45,15 +45,163 @@
 </section>
 
 <section class="pets">
-  <div>
+  <div class="pets-header">
     <h1>Animais em busca de amor e carinho</h1>
+    <button id="abrirFormularioPost" class="btn">Postar animal para adoção</button>
   </div>
-  <div class="cards-pets">
-    
+
+  <div id="formPostAnimal" class="form-post hidden">
+    <h2>Postar animal para adoção</h2>
+
+    <select id="animal">
+      <option value="">Animal</option>
+      <option value="Cachorro">Cachorro</option>
+      <option value="Gato">Gato</option>
+    </select>
+
+    <select id="sexo">
+      <option value="">Sexo</option>
+      <option value="Fêmea">Fêmea</option>
+      <option value="Macho">Macho</option>
+    </select>
+
+    <select id="raca">
+      <option value="">Raça</option>
+    </select>
+
+    <select id="cor">
+      <option value="">Cor</option>
+    </select>
+
+    <select id="idade">
+      <option value="">Idade</option>
+      <option value="Filhote">Filhote</option>
+      <option value="Jovem">Jovem</option>
+      <option value="Adulto">Adulto</option>
+      <option value="Idoso">Idoso</option>
+    </select>
+
+    <select id="castrado">
+      <option value="">Castrado?</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" value="Antirrábica" class="vacina"> Antirrábica</label>
+      <label><input type="checkbox" value="V8/V10" class="vacina"> V8/V10</label>
+      <label><input type="checkbox" value="Vermífugo" class="vacina"> Vermífugo</label>
+      <label><input type="checkbox" value="Nenhuma" class="vacina"> Nenhuma</label>
+    </div>
+
+    <textarea id="historia" placeholder="História do animal"></textarea>
+    <textarea id="observacoes" placeholder="Observações/cuidados especiais"></textarea>
+
+    <select id="estado">
+      <option value="">Estado</option>
+    </select>
+
+    <select id="cidade">
+      <option value="">Cidade</option>
+    </select>
+
+    <input id="imagem" type="file" accept="image/*">
+
+    <button id="btnPublicar" class="btn">Publicar</button>
   </div>
+
+  <div class="area-filtro">
+    <button id="abrirFiltros" class="btn-filtro">☰ Filtros</button>
+
+    <div id="painelFiltros" class="painel-filtros hidden">
+      <h3>Filtros</h3>
+
+      <details>
+        <summary>Animal</summary>
+        <label><input type="checkbox" class="filtro-check" data-campo="animal" value="Cachorro"> Cachorro</label>
+        <label><input type="checkbox" class="filtro-check" data-campo="animal" value="Gato"> Gato</label>
+      </details>
+
+      <details>
+        <summary>Idade</summary>
+        <label><input type="checkbox" class="filtro-check" data-campo="idade" value="Filhote"> Filhote</label>
+        <label><input type="checkbox" class="filtro-check" data-campo="idade" value="Jovem"> Jovem</label>
+        <label><input type="checkbox" class="filtro-check" data-campo="idade" value="Adulto"> Adulto</label>
+        <label><input type="checkbox" class="filtro-check" data-campo="idade" value="Idoso"> Idoso</label>
+      </details>
+
+      <details>
+        <summary>Sexo</summary>
+        <label><input type="checkbox" class="filtro-check" data-campo="sexo" value="Fêmea"> Fêmea</label>
+        <label><input type="checkbox" class="filtro-check" data-campo="sexo" value="Macho"> Macho</label>
+      </details>
+
+      <details>
+        <summary>Cor</summary>
+        <div id="filtrosCores"></div>
+      </details>
+
+      <details>
+        <summary>Raça</summary>
+        <div id="filtrosRacas"></div>
+      </details>
+
+      <details>
+        <summary>Estado</summary>
+        <div id="filtrosEstados"></div>
+      </details>
+
+      <details>
+        <summary>Cidade</summary>
+        <div id="filtrosCidades"></div>
+      </details>
+
+      <button id="limparFiltros" class="btn">Limpar filtros</button>
+    </div>
+  </div>
+
+  <div class="cards-pets"></div>
 </section>
 
 
+
+<!-- WIDGET DE CHAT ESTILO INSTAGRAM -->
+<div id="chatWidget">
+
+  <button id="chatBotao" onclick="toggleListaConversas()">
+    💬
+    <span id="chatBadge" class="chat-badge hidden">0</span>
+  </button>
+
+  <div id="chatLista" class="chat-lista hidden">
+    <div class="chat-lista-header">
+      <span>💬 Mensagens</span>
+      <button onclick="toggleListaConversas()">✕</button>
+    </div>
+    <div id="chatListaItems">
+      <p class="chat-vazio">Nenhuma conversa ainda.</p>
+    </div>
+  </div>
+
+  <div id="chatJanela" class="chat-janela hidden">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <span id="chatAnimalNome">🐾 Animal</span>
+        <small id="chatComQuem">Conversando com: ...</small>
+      </div>
+      <div class="chat-header-acoes">
+        <button onclick="voltarLista()" title="Voltar">‹</button>
+        <button id="fecharChat" title="Fechar">✕</button>
+      </div>
+    </div>
+    <div id="chatMensagens" class="chat-mensagens"></div>
+    <div class="chat-input-area">
+      <input id="chatInput" type="text" placeholder="Digite sua mensagem..." />
+      <button id="chatEnviar">➤</button>
+    </div>
+  </div>
+
+</div>
 
     <script src="dashboard.js"></script>
   </body>
