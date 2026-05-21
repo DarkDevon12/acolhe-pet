@@ -1,5 +1,4 @@
-const API_URL = "http://127.0.0.1:3000";
-
+const API_URL = "https://acolhe-pet.onrender.com";
 const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
 const saudacao = document.getElementById("saudacao");
 const botaoLogout = document.getElementById("logout");
